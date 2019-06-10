@@ -1,0 +1,24 @@
+{
+    "tipos" : [
+        {
+            "nombre": "Gasolinera", 
+            "icon": "icono_gasolinera"
+        },
+        {
+            "nombre": "Tienda", 
+            "icon": "icono_tienda"
+        },
+        {
+            "nombre": "Taller", 
+            "icon": "icono_taller"
+        },
+        {
+            "nombre": "Hotel", 
+            "icon": "icono_hotel"
+        },
+        {
+            "nombre": "Inicio subida", 
+            "icon": "icono_inicio_subida"
+        }
+    ]
+}
