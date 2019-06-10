@@ -7,6 +7,9 @@ class Coordenada {
 
   String direccion;
 
+  int metros;
+
   Coordenada(this.longitud, this.latitud);
   Coordenada.direccion (this.direccion);
+  Coordenada.distancia (this.metros);
 }

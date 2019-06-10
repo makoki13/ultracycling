@@ -1,16 +1,13 @@
-
 import 'package:ultracycling/src/clases/marcas.dart';
 import 'package:ultracycling/src/clases/referencia.dart';
-import 'package:ultracycling/src/clases/segmento.dart';
 
-class Tramos {  
+class Segmento {
   int _ordinal;
   String _nombre;
 
-  Referencia inicio = Referencia('inicio');
-  Referencia fin = Referencia('fin');
-  List<Segmento> segmentos = List<Segmento>();
-  List<Marca> marcas = List<Marca>();
+  Referencia inicio;
+  Referencia fin;
+  List<Marca> marcas;
 
   set ordinal( int valor) {
     this._ordinal = valor;

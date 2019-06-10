@@ -1,6 +1,3 @@
-
-
-
 import 'package:ultracycling/src/clases/jornada.dart';
 
 class Ruta {
@@ -17,8 +14,43 @@ class Ruta {
     _getFromStore(id);
   }
 
-  static void nueva(String nombre, DateTime inicio, String comentarios) {
+  Ruta.nueva(String nombre, DateTime inicio, String comentarios) {
+    this._nombre = nombre;
+    this._inicio = inicio;
+    this._comentarios = comentarios;
     _addToStore(nombre, inicio, comentarios);
+  }
+
+  set id( String valor) {
+    this._id = valor;
+  }
+
+  String get id {
+    return this._id;
+  }
+
+  set nombre( String valor) {
+    this._nombre = valor;
+  }
+
+  String get nombre {
+    return this._nombre;
+  }
+
+  set inicio( DateTime valor) {
+    this._inicio = valor;
+  }
+
+  DateTime get inicio {
+    return this._inicio;
+  }
+
+  set comentarios( String valor) {
+    this._comentarios = valor;
+  }
+
+  String get comentarios {
+    return this._comentarios;
   }
 
   static List<Ruta> listaPendientes() {
@@ -47,10 +79,4 @@ class Ruta {
     String id = _getNewID();
     print(id);
   }
-
-  String getNombre() {
-    return this._nombre;
-  }
-
-  String getID() { return this._id;}
 }
