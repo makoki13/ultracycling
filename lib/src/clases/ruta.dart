@@ -1,7 +1,7 @@
 
 
 
-import 'package:ultracycling/src/clases/Jornada.dart';
+import 'package:ultracycling/src/clases/jornada.dart';
 
 class Ruta {
   String _id;
@@ -10,7 +10,7 @@ class Ruta {
   DateTime _inicio;
   String _comentarios;  
 
-  List<Jornada> jornadas = List<Jornada>(); 
+  List<Jornada> jornadas = new List<Jornada>(); 
 
   Ruta(String id) {
     this._id = id;
@@ -47,4 +47,10 @@ class Ruta {
     String id = _getNewID();
     print(id);
   }
+
+  String getNombre() {
+    return this._nombre;
+  }
+
+  String getID() { return this._id;}
 }
