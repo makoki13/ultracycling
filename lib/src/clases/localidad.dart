@@ -1,6 +1,5 @@
 
 
-
 class Localidad {  
   String _nombre;
   String pedania;

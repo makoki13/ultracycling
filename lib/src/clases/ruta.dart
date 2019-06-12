@@ -7,7 +7,7 @@ class Ruta {
   DateTime _inicio;
   String _comentarios;  
 
-  List<Jornada> jornadas = new List<Jornada>(); 
+  List<Jornada> _jornadas = new List<Jornada>(); 
 
   Ruta(String id) {
     this._id = id;
@@ -17,7 +17,7 @@ class Ruta {
   Ruta.nueva(String nombre, DateTime inicio, String comentarios) {
     this._nombre = nombre;
     this._inicio = inicio;
-    this._comentarios = comentarios;
+    this._comentarios = comentarios;    
     _addToStore(nombre, inicio, comentarios);
   }
 
@@ -53,6 +53,23 @@ class Ruta {
     return this._comentarios;
   }
 
+  List<Jornada> get jornadas {
+    return this._jornadas;
+  }
+
+  void addJornada(Jornada jornada) {
+    this._jornadas.add(jornada);
+  }
+
+  void _getFromStore(String id) {        
+    this._nombre = 'Nombre';
+    this._inicio = new DateTime.now();
+    this._comentarios = '';
+
+    //Pendiente las jornadas
+  }
+
+  /* Funciones estaticas *****************************************************/
   static List<Ruta> listaPendientes() {
     return null;
   }
@@ -65,17 +82,12 @@ class Ruta {
     return null;
   }
 
-  void _getFromStore(String id) {        
-    this._nombre = 'Nombre';
-    this._inicio = new DateTime.now();
-    this._comentarios = '';
-  }
-
   static String _getNewID() {
     return 'aaaaa';
   }
 
   static void _addToStore(String nombre, DateTime inicio, String comentarios) {        
+    //Pendiente implementar      
     String id = _getNewID();
     print(id);
   }
