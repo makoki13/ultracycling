@@ -12,6 +12,7 @@ class _NuevaPageState extends State<NuevaPage> {
   String _abreviatura  = '';
   String _comentarios = ''; 
   String _fecha  = '';
+  bool _esFavorito = false;
 
   String _opcionSeleccionada = 'Volar';
 
@@ -88,7 +89,8 @@ class _NuevaPageState extends State<NuevaPage> {
             borderRadius: BorderRadius.circular(5.0),          
           ),
           counterText: 'Letras ${ _abreviatura.length }',
-          hintText: 'Abreviatura (max. 6 caracteres)',
+          hintText: 'Abreviatura',
+          helperText: 'Mñaximo 6 caracteres',
           labelText: 'Abreviatura',
                   
           suffixIcon: Icon( Icons.vpn_key ),
@@ -147,8 +149,7 @@ class _NuevaPageState extends State<NuevaPage> {
 
   }
 
-  Widget _crearComentarios(){
-
+  Widget _crearComentarios() {
      return TextField(   
       keyboardType: TextInputType.multiline,
       maxLines: null,   
@@ -168,42 +169,29 @@ class _NuevaPageState extends State<NuevaPage> {
 
   }
 
-
-  List<DropdownMenuItem<String>> getOpcionesDropdown() {
-
-    List<DropdownMenuItem<String>> lista = new List();
-
-    _poderes.forEach( (poder){
-
-      lista.add( DropdownMenuItem(
-        child: Text(poder),
-        value: poder,
-      ));
-
-    });
-
-    return lista;
-
-  }
-
   Widget _crearFavorito() {
-
-    return Row(
-      children: <Widget>[
+    return Row(      
+      children: <Widget>[        
         Icon(Icons.select_all),
-        SizedBox(width: 30.0),   
+        SizedBox(width: 20.0),   
+        Text('¿Es ruta favorita?', textAlign: TextAlign.left, style: TextStyle(fontSize: 16.0 ) ),
+        SizedBox(width: 00.0),   
         Expanded(
-          child: DropdownButton(
-            value: _opcionSeleccionada,
-            items: getOpcionesDropdown(),
-            onChanged: (opt) {
-              setState(() {
-                _opcionSeleccionada = opt;
-              });
-            },
-          ),
+          child:
+            GestureDetector(
+              onTap: () { 
+                print ("Tap del boton rojo"); 
+                setState(() {
+                  _esFavorito = !_esFavorito; //<--update alreadSaved
+                });
+              },
+              child: Icon(
+                 _esFavorito ? Icons.favorite : Icons.favorite_border,
+                color:  _esFavorito ? Colors.red : null,                
+                textDirection: TextDirection.ltr,
+              ),         
+            ),
         )
-
       ],
     );
     

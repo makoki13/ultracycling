@@ -9,7 +9,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Componentes'),
+        title: Text('ULTRACYCLING'),
+        centerTitle: true,
+        backgroundColor: Colors.deepOrange,
       ),
       body: _lista(),
     );
