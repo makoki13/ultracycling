@@ -9,7 +9,8 @@ class NuevaPage extends StatefulWidget {
 class _NuevaPageState extends State<NuevaPage> {
 
   String _nombre = '';
-  String _email  = '';
+  String _abreviatura  = '';
+  String _comentarios = ''; 
   String _fecha  = '';
 
   String _opcionSeleccionada = 'Volar';
@@ -23,21 +24,30 @@ class _NuevaPageState extends State<NuevaPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Nueva ruta'),
+        actions: <Widget>[
+          Container(
+            padding: EdgeInsets.all(5.0),
+            child: FloatingActionButton(
+              backgroundColor: Colors.cyan,
+              child: Icon( Icons.save ),
+              onPressed: () => _salva(context),
+            ),          
+          ),          
+        ]
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
         children: <Widget>[
           _crearNombre(),
           Divider(),
-          _crearEmail(),
-          Divider(),
-          _crearPassword(),
-          Divider(),
+          _crearAbreviatura(),
+          Divider(),          
           _crearFecha( context ),
           Divider(),
-          _crearDropdown(),
+          _crearComentarios(),
           Divider(),
-          _crearPersona()
+          _crearFavorito(),
+          Divider(),          
         ],
       ),
     );
@@ -49,9 +59,8 @@ class _NuevaPageState extends State<NuevaPage> {
       textCapitalization: TextCapitalization.sentences,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20.0)
-        ),
-        counterText: 'Letras ${ _nombre.length }',
+          borderRadius: BorderRadius.circular(5.0)
+        ),        
         hintText: 'Nombre de la ruta',
         labelText: 'Nombre',
         helperText: 'Nombre de la ruta',
@@ -67,47 +76,34 @@ class _NuevaPageState extends State<NuevaPage> {
 
   }
 
-  Widget _crearEmail() {
+  Widget _crearAbreviatura() {
 
-    return TextField(
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20.0)
+    return Container(
+      margin: const EdgeInsets.only(right: 150, left: 0),
+      child: TextField(      
+        maxLength: 6,
+        textCapitalization: TextCapitalization.characters,
+        decoration: InputDecoration(        
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5.0),          
+          ),
+          counterText: 'Letras ${ _abreviatura.length }',
+          hintText: 'Abreviatura (max. 6 caracteres)',
+          labelText: 'Abreviatura',
+                  
+          suffixIcon: Icon( Icons.vpn_key ),
+          icon: Icon( Icons.ac_unit )
         ),
-        hintText: 'Email',
-        labelText: 'Email',
-        suffixIcon: Icon( Icons.alternate_email ),
-        icon: Icon( Icons.email )
+        onChanged: (valor) =>setState(() {
+          _abreviatura = valor;
+        })
       ),
-      onChanged: (valor) =>setState(() {
-        _email = valor;
-      })
-    );
+    )
+    ;
 
   }
 
-  Widget _crearPassword(){
-
-     return TextField(
-      obscureText: true,
-      decoration: InputDecoration(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20.0)
-        ),
-        hintText: 'Password',
-        labelText: 'Password',
-        suffixIcon: Icon( Icons.lock_open ),
-        icon: Icon( Icons.lock )
-      ),
-      onChanged: (valor) =>setState(() {
-        _email = valor;
-      })
-    );
-
-  }
-
-
+  
   Widget _crearFecha( BuildContext context ) {
 
     return TextField(
@@ -117,8 +113,8 @@ class _NuevaPageState extends State<NuevaPage> {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20.0)
         ),
-        hintText: 'Fecha de nacimiento',
-        labelText: 'Fecha de nacimiento',
+        hintText: 'Fecha de inicio del evento',
+        labelText: 'Fecha del evento',
         suffixIcon: Icon( Icons.perm_contact_calendar ),
         icon: Icon( Icons.calendar_today )
       ),
@@ -151,6 +147,28 @@ class _NuevaPageState extends State<NuevaPage> {
 
   }
 
+  Widget _crearComentarios(){
+
+     return TextField(   
+      keyboardType: TextInputType.multiline,
+      maxLines: null,   
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0)
+        ),
+        hintText: 'Notas',
+        labelText: 'Notas de la ruta',
+        suffixIcon: Icon( Icons.note ),
+        icon: Icon( Icons.note_add )
+      ),
+      onChanged: (valor) =>setState(() {
+        _comentarios = valor;
+      })
+    );
+
+  }
+
+
   List<DropdownMenuItem<String>> getOpcionesDropdown() {
 
     List<DropdownMenuItem<String>> lista = new List();
@@ -168,7 +186,7 @@ class _NuevaPageState extends State<NuevaPage> {
 
   }
 
-  Widget _crearDropdown() {
+  Widget _crearFavorito() {
 
     return Row(
       children: <Widget>[
@@ -195,16 +213,61 @@ class _NuevaPageState extends State<NuevaPage> {
 
   }
 
+  _salva ( BuildContext context ) {
+    if (_nombre.trim() == '')
+      showDialog(
+        context: context,
+        barrierDismissible: true,
+        builder: (context) {
 
+          return AlertDialog(
+            shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0) ),
+            title: Text('¡Atención!'),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text('La ruta debe de tener al menos un nombre', textAlign: TextAlign.center,),                
+              ],
+            ),
+            actions: <Widget>[              
+              FlatButton(
+                child: Text('Ok'),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
 
-  Widget _crearPersona() {
+        }
+      );
+    else
+      showDialog(
+        context: context,
+        barrierDismissible: true,
+        builder: (context) {
 
-    return ListTile(
-      title: Text('Nombre es: $_nombre'),
-      subtitle: Text('Email: $_email'),
-      trailing: Text(_opcionSeleccionada),
-    );
+          return AlertDialog(
+            shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0) ),
+            title: Text('GUARDANDO'),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text('Se está guardando la ruta', textAlign: TextAlign.center,),                
+              ],
+            ),
+            actions: <Widget>[              
+              FlatButton(
+                child: Text('Ok'),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
 
+        }
+      );
   }
 
 }
