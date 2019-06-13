@@ -1,11 +1,16 @@
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+
 import 'package:ultracycling/src/clases/jornada.dart';
 
 class Ruta {
   String _id;
 
   String _nombre;  
+  String _clave = '';
   DateTime _inicio;
   String _comentarios;  
+  bool _esFavorita = false;
 
   List<Jornada> _jornadas = new List<Jornada>(); 
 
@@ -14,10 +19,12 @@ class Ruta {
     _getFromStore(id);
   }
 
-  Ruta.nueva(String nombre, DateTime inicio, String comentarios) {
+  Ruta.nueva(String nombre, String clave, DateTime inicio, String comentarios, bool esFavorita) {
     this._nombre = nombre;
+    this._clave = clave;
     this._inicio = inicio;
     this._comentarios = comentarios;    
+    this._esFavorita = esFavorita;
     _addToStore(nombre, inicio, comentarios);
   }
 
@@ -37,6 +44,14 @@ class Ruta {
     return this._nombre;
   }
 
+  set clave( String valor) {
+    this._clave = valor;
+  }
+
+  String get clave {
+    return this._clave;
+  }
+
   set inicio( DateTime valor) {
     this._inicio = valor;
   }
@@ -51,6 +66,14 @@ class Ruta {
 
   String get comentarios {
     return this._comentarios;
+  }
+
+  set favorita ( bool valor ) {
+    this._esFavorita = valor;
+  }
+
+  bool get favorita {
+    return this._esFavorita;
   }
 
   List<Jornada> get jornadas {
@@ -70,6 +93,14 @@ class Ruta {
   }
 
   /* Funciones estaticas *****************************************************/
+  static Future<List<dynamic>> lista() async {
+    List<dynamic> opciones = [];  
+    final resp = await rootBundle.loadString('data/rutas_lista.json');    
+    Map dataMap = json.decode( resp );
+    opciones = dataMap['lista'];
+    return opciones;
+  }
+  
   static List<Ruta> listaPendientes() {
     return null;
   }
@@ -78,7 +109,7 @@ class Ruta {
     return null;
   }
 
-  static List<Ruta> listaFavoritas() {
+  static Ruta getFavorita() {
     return null;
   }
 

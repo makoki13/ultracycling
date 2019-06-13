@@ -1,0 +1,50 @@
+{    
+    "lista" : [
+        {
+            "id" : "ruta1",
+            "nombre" : "Primera ruta",
+            "clave" : "PRIMER",
+            "inicio": "2019/06/22",
+            "comentarios": "Comentarios de a primera ruta",
+            "estado": 1,
+            "favorita": "1"
+        },
+        {
+            "id" : "ruta2",
+            "nombre" : "Segunda ruta",
+            "clave" : "SEGUND",
+            "inicio": "2019/07/22",
+            "comentarios": "Comentarios de la segunda ruta",
+            "estado": 0,
+            "favorita": "0"
+        },
+        {
+            "id" : "ruta3",
+            "nombre" : "Tercera ruta",
+            "clave" : "TER",
+            "inicio": "2018/08/22",
+            "comentarios": "Comentarios de la cuarta ruta",
+            "estado": 2,
+            "favorita": "0"
+        },
+        {
+            "id" : "ruta4",
+            "nombre" : "Cuarta ruta",
+            "clave" : "CUARTA",
+            "inicio": "2019/09/22",
+            "comentarios": "Comentarios de a primera ruta",
+            "estado": 0,
+            "favorita": "0"
+            
+        },
+        {
+            "id" : "ruta5",
+            "nombre" : "",
+            "clave" : "",
+            "inicio": "",
+            "comentarios": "",
+            "estado": 3,
+            "favorita": "1"
+        }
+    ]
+}

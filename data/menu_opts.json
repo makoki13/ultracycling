@@ -1,0 +1,25 @@
+{
+    "nombreApp" : "Componentes",
+    "rutas" : [
+        {
+            "ruta" : "favorita",
+            "icon" : "favorita",
+            "texto": "Ruta Favorita"
+        },
+        {
+            "ruta" : "rutas",
+            "icon" : "bicicleta",
+            "texto": "Rutas"
+        },
+        {
+            "ruta" : "nueva",
+            "icon" : "folder_open",
+            "texto": "Nueva Ruta"
+        },
+        {
+            "ruta" : "configuracion",
+            "icon" : "config",
+            "texto": "Configuracion"
+        }
+    ]
+}
