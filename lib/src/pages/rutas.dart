@@ -17,19 +17,12 @@ class RutasPage extends StatelessWidget {
         actions: <Widget>[
           Container(
             padding: EdgeInsets.all(5.0),
-            child: CircleAvatar(
-              backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1018943227791982592/URnaMrya.jpg'),
-              radius: 25.0,
-            ),
-          ),
-
-          Container(
-            margin: EdgeInsets.only(right: 10.0),
-            child: CircleAvatar(
-              child: Text('SL'),
-              backgroundColor: Colors.brown,
-            ),
-          )
+            child: FloatingActionButton(
+              backgroundColor: Colors.cyan,
+              child: Icon( Icons.add ),
+              onPressed: () { Navigator.pushNamed(context, 'nueva'  ); },
+            ),          
+          ),          
         ],
       ),
       body: _lista(),
@@ -54,9 +47,12 @@ class RutasPage extends StatelessWidget {
     final List<Widget> opciones = [];
 
     data.forEach( (opt) {
+      String nombre = opt['nombre']; 
+      if (nombre.trim() == '') nombre = '(sin nombre)';
       final widgetTemp = ListTile(
-        title: Text( opt['nombre'] ),        
-        leading:  getIcon( opt['favorita'] ) ,
+        title: Text( nombre ),        
+        leading:  getIcon( opt['estado'] ) ,
+        subtitle: Text( opt['inicio'] ),
         trailing: Icon ( Icons.keyboard_arrow_right, color: Colors.blue ),
         onTap: () {},
       );

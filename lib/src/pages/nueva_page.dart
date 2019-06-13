@@ -27,7 +27,7 @@ class _NuevaPageState extends State<NuevaPage> {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
         children: <Widget>[
-          _crearInput(),
+          _crearNombre(),
           Divider(),
           _crearEmail(),
           Divider(),
@@ -43,8 +43,7 @@ class _NuevaPageState extends State<NuevaPage> {
     );
   }
 
-  Widget _crearInput() {
-
+  Widget _crearNombre() {
     return TextField(
       // autofocus: true,
       textCapitalization: TextCapitalization.sentences,
@@ -53,11 +52,11 @@ class _NuevaPageState extends State<NuevaPage> {
           borderRadius: BorderRadius.circular(20.0)
         ),
         counterText: 'Letras ${ _nombre.length }',
-        hintText: 'Nombre de la persona',
+        hintText: 'Nombre de la ruta',
         labelText: 'Nombre',
-        helperText: 'Sólo es el nombre',
-        suffixIcon: Icon( Icons.accessibility ),
-        icon: Icon( Icons.account_circle )
+        helperText: 'Nombre de la ruta',
+        suffixIcon: Icon( Icons.text_fields ),
+        icon: Icon( Icons.map )
       ),
       onChanged: (valor){
         setState(() {

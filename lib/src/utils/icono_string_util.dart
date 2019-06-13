@@ -6,10 +6,11 @@ final _icons = <String, IconData>{
   'bicicleta'     : Icons.directions_bike,
   'folder_open'   : Icons.create_new_folder,
   'config'        : Icons.settings_applications,
-  '0'             : Icons.directions_bike,
+  '0'             : Icons.ondemand_video,
   '1'             : Icons.directions_bike,
-  '2'             : Icons.directions_bike,
-  '3'             : Icons.directions_bike,
+  '2'             : Icons.stop,
+  '3'             : Icons.not_interested,
+  ''              : Icons.blur_off
 };
 
 
@@ -17,6 +18,6 @@ final _icons = <String, IconData>{
 
 Icon getIcon( String nombreIcono ) {
 
-  return Icon( _icons[nombreIcono], color: Colors.blue );
+  return Icon( _icons[nombreIcono], color: Colors.redAccent );
   
 }
