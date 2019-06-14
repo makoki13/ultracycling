@@ -9,7 +9,23 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ULTRACYCLING'),
+        title: Text(
+          'Ultracycling Route Planner',
+          style: TextStyle(
+            shadows: <Shadow>[
+              Shadow(
+                offset: Offset(2.0, 2.0),
+                blurRadius: 3.0,
+                color: Color.fromARGB(255, 0, 0, 0),
+              ),
+              Shadow(
+                offset: Offset(2.0, 2.0),
+                blurRadius: 8.0,
+                color: Color.fromARGB(125, 0, 0, 255),
+              ),
+            ],
+          ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.deepOrange,
       ),
