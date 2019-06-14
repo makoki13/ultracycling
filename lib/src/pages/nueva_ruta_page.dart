@@ -1,22 +1,18 @@
 
 import 'package:flutter/material.dart';
 
-class NuevaPage extends StatefulWidget {
+class NuevaRutaPage extends StatefulWidget {
   @override
-  _NuevaPageState createState() => _NuevaPageState();
+  _NuevaRutaState createState() => _NuevaRutaState();
 }
 
-class _NuevaPageState extends State<NuevaPage> {
+class _NuevaRutaState extends State<NuevaRutaPage> {
 
   String _nombre = '';
   String _abreviatura  = '';
   String _comentarios = ''; 
   String _fecha  = '';
   bool _esFavorito = false;
-
-  String _opcionSeleccionada = 'Volar';
-
-  List<String> _poderes = ['Volar', 'Rayos X', 'Super Aliento', 'Super Fuerza'];
 
   TextEditingController _inputFieldDateController = new TextEditingController();
 
@@ -29,12 +25,14 @@ class _NuevaPageState extends State<NuevaPage> {
           Container(
             padding: EdgeInsets.all(5.0),
             child: FloatingActionButton(
-              backgroundColor: Colors.cyan,
+              backgroundColor: Colors.orangeAccent,
               child: Icon( Icons.save ),
+              tooltip: 'Guardar la nueva ruta',
               onPressed: () => _salva(context),
             ),          
           ),          
-        ]
+        ],
+        backgroundColor: Colors.deepOrange,
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),

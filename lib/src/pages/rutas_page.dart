@@ -18,12 +18,14 @@ class RutasPage extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(5.0),
             child: FloatingActionButton(
-              backgroundColor: Colors.cyan,
+              backgroundColor: Colors.orangeAccent,
+              tooltip: 'Crear una nueva ruta',
               child: Icon( Icons.add ),
               onPressed: () { Navigator.pushNamed(context, 'nueva'  ); },
             ),          
           ),          
         ],
+        backgroundColor: Colors.deepOrange,
       ),
       body: _lista(),
     );    

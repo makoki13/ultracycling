@@ -1,3 +1,7 @@
+import 'dart:async';
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
 import 'package:ultracycling/src/clases/ruta.dart';
 import 'package:ultracycling/src/clases/tramo.dart';
 
@@ -82,6 +86,14 @@ class Jornada {
     //Pendiente implementar      
     String id = _getNewID(ruta);
     print(id);
+  }
+
+  static Future<List<dynamic>> lista(String idRuta) async {
+    List<dynamic> opciones = [];  
+    final resp = await rootBundle.loadString('data/jornadas_lista.json');    
+    Map dataMap = json.decode( resp );
+    opciones = dataMap[idRuta];
+    return opciones;
   }
 
 }
