@@ -111,7 +111,8 @@ class Ruta {
   }
 
   static Ruta getFavorita() {
-    return null;
+    Ruta rutaFavorita = Ruta('ruta1');
+    return rutaFavorita;
   }
 
   static String _getNewID() {

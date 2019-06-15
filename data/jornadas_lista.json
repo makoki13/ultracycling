@@ -8,7 +8,18 @@
             "comentarios": "Comentarios de la primera jornada de la primera ruta",
             "distancia": "450,7",
             "duracion": "1d 14h 30'",
-            "tramos": []
+            "tramos": [
+                {
+                    "ordinal": "1",
+                    "nombre": "Tramo 1 ruta 1",
+                    "comentarios": "Comentarios del tramo 1 de la primera jornada de la primera ruta",
+                    "inicio": "Punto de inicio",
+                    "esFinal": "S",
+                    "fin": "Punto de fin",
+                    "segmentos": [],
+                    "marcas": []
+                }
+            ]
         },
         {
             "ruta": "ruta2",

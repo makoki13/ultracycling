@@ -1,27 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:ultracycling/src/clases/jornada.dart';
 
-class JornadasPage extends StatelessWidget {
-  const JornadasPage({Key key}) : super(key: key);
+class RutaPage extends StatelessWidget {
+  const RutaPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Jornadas'),
-        actions: <Widget>[
-          Container(
-            padding: EdgeInsets.all(5.0),
-            child: FloatingActionButton(
-              backgroundColor: Colors.orangeAccent,
-              child: Icon( Icons.add ),
-              onPressed: () { Navigator.pushNamed(context, 'nueva_jornada'  ); }, //'nueva'   : ( BuildContext context ) => NuevaRutaPage(),      
+    return SafeArea(
+      top: true,
+      minimum: EdgeInsets.only(top: 35.0),
+      child: Scaffold (     
+        resizeToAvoidBottomInset: true,         
+        appBar: AppBar(          
+          title: Text('Ruta XXXXXX'),
+          actions: <Widget>[            
+            Container(            
+              padding: EdgeInsets.all(5.0),
+              child: FloatingActionButton(
+                heroTag: "btn1",
+                backgroundColor: Colors.orangeAccent,
+                child: Icon( Icons.add ),
+                onPressed: () { Navigator.pushNamed(context, 'nueva_jornada'  ); }, 
+              ),          
             ),          
-          ),          
-        ],
-        backgroundColor: Colors.deepOrange,
-      ),
-      body: _lista(),
+            Container(
+              padding: EdgeInsets.all(5.0),
+              child: FloatingActionButton(
+                heroTag: "btn2",
+                backgroundColor: Colors.orangeAccent,
+                child: Icon( Icons.edit ),
+                onPressed: () { /*Navigator.pushNamed(context, 'edita_jornada'  ); */ }, //'nueva'   : ( BuildContext context ) => NuevaRutaPage(),      
+              ),          
+            ),
+          ],
+          backgroundColor: Colors.deepOrange,
+        ),
+        body: _lista(),
+      )
     );
   }
 
@@ -73,7 +88,7 @@ class JornadasPage extends StatelessWidget {
         ) ,
         subtitle: Text( "${opt['inicio']} \nKm: ${opt['distancia']} · Duración: ${opt['duracion']}" ),
         trailing: Icon ( Icons.keyboard_arrow_right, color: Colors.blue ),
-        onTap: () {},
+        onTap: () { Navigator.pushNamed(context, 'nueva_jornada'  ); },
       );
 
       opciones..add( widgetTemp )

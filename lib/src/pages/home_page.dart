@@ -45,20 +45,12 @@ class HomePage extends StatelessWidget {
 
       },
     );
-
-  
-
-    
-
   }
 
   List<Widget> _listaItems( List<dynamic> data, BuildContext context ) {
-
     final List<Widget> opciones = [];
 
-
     data.forEach( (opt) {
-
       final widgetTemp = ListTile(
         title: Text( opt['texto'] ),
         leading:  getIcon( opt['icon'] ) ,
@@ -66,13 +58,6 @@ class HomePage extends StatelessWidget {
         onTap: () {
 
           Navigator.pushNamed(context, opt['ruta'] );
-
-          // final route = MaterialPageRoute(
-          //   builder: ( context )=> AlertPage()
-          // );
-
-          // Navigator.push(context, route);
-
         },
       );
 
@@ -82,9 +67,7 @@ class HomePage extends StatelessWidget {
     });
 
     return opciones;
-
   }
-
 }
 
 
