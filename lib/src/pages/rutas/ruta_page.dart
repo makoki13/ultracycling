@@ -88,7 +88,7 @@ class RutaPage extends StatelessWidget {
         ) ,
         subtitle: Text( "${opt['inicio']} \nKm: ${opt['distancia']} · Duración: ${opt['duracion']}" ),
         trailing: Icon ( Icons.keyboard_arrow_right, color: Colors.blue ),
-        onTap: () { Navigator.pushNamed(context, 'nueva_jornada'  ); },
+        onTap: () { Navigator.pushNamed(context, 'jornada'  ); },
       );
 
       opciones..add( widgetTemp )

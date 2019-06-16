@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-import 'package:ultracycling/src/pages/favorita_page.dart';
+import 'package:ultracycling/src/pages/home_page.dart';
 import 'package:ultracycling/src/routes/routes.dart';
  
 void main() => runApp(MyApp());
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
         print( 'Ruta llamda: ${ settings.name }' );
 
         return MaterialPageRoute(
-          builder: ( BuildContext context ) => FavoritaPage()
+          builder: ( BuildContext context ) => HomePage()
         );
       },
       

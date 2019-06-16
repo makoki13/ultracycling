@@ -1,9 +1,8 @@
 {    
     "ruta1" : [
         {
-            "ruta": "ruta1",
             "ordinal" : "1",
-            "nombre" : "Primera jornada",
+            "nombre" : "Primera jornada R1",
             "inicio": "2019/06/23 22:00",
             "comentarios": "Comentarios de la primera jornada de la primera ruta",
             "distancia": "450,7",
@@ -22,9 +21,8 @@
             ]
         },
         {
-            "ruta": "ruta2",
             "ordinal" : "2",
-            "nombre" : "Segunda jornada",
+            "nombre" : "Segunda jornada R1",
             "inicio": "2019/06/25 07:00",
             "comentarios": "Comentarios de la segunda jornada de la primera ruta",
             "distancia": "310,2",
@@ -32,9 +30,8 @@
             "tramos": []
         },
         {
-            "ruta": "ruta3",
             "ordinal" : "3",
-            "nombre" : "Tercera jornada",
+            "nombre" : "Tercera jornada R1",
             "inicio": "2019/06/26 07:00",
             "comentarios": "Comentarios de la tercera jornada de la primera ruta",
             "distancia": "400,7",
@@ -42,91 +39,88 @@
             "tramos": []
         },
         {
-            "ruta": "ruta1",
             "ordinal" : "4",
-            "nombre" : "Cuarta jornada",
+            "nombre" : "Cuarta jornada R1",
             "inicio": "2019/06/28 07:00",
             "comentarios": "Comentarios de la cuarta jornada de la primera ruta",
             "distancia": "150,7",
             "duracion": "07h 30'",
             "tramos": []
-        },
+        }
+    ],
+
+    "ruta2": [
         {
-            "ruta": "ruta1",
             "ordinal" : "1",
-            "nombre" : "Primera jornada",
+            "nombre" : "Primera jornada R2",
             "inicio": "2019/06/23 22:00",
-            "comentarios": "Comentarios de la primera jornada de la primera ruta",
+            "comentarios": "Comentarios de la primera jornada de la segunda ruta",
             "distancia": "450,7",
             "duracion": "1d 14h 30'",
             "tramos": []
         },
         {
-            "ruta": "ruta2",
             "ordinal" : "2",
-            "nombre" : "Segunda jornada",
+            "nombre" : "Segunda jornada R2",
             "inicio": "2019/06/25 07:00",
-            "comentarios": "Comentarios de la segunda jornada de la primera ruta",
+            "comentarios": "Comentarios de la segunda jornada  de la segunda ruta",
             "distancia": "310,2",
             "duracion": "15h 45'",
             "tramos": []
         },
         {
-            "ruta": "ruta3",
             "ordinal" : "3",
-            "nombre" : "Tercera jornada",
+            "nombre" : "Tercera jornada R2",
             "inicio": "2019/06/26 07:00",
-            "comentarios": "Comentarios de la tercera jornada de la primera ruta",
+            "comentarios": "Comentarios de la tercera jornada de la segunda ruta",
             "distancia": "400,7",
             "duracion": "1d 6h 00'",
             "tramos": []
         },
         {
-            "ruta": "ruta1",
             "ordinal" : "4",
-            "nombre" : "Cuarta jornada",
+            "nombre" : "Cuarta jornada R2",
             "inicio": "2019/06/28 07:00",
-            "comentarios": "Comentarios de la cuarta jornada de la primera ruta",
+            "comentarios": "Comentarios de la cuarta jornada de la segunda ruta",
             "distancia": "150,7",
             "duracion": "07h 30'",
             "tramos": []
-        },
+        }
+    ],
+
+    "ruta3": [
         {
-            "ruta": "ruta1",
             "ordinal" : "1",
-            "nombre" : "Primera jornada",
+            "nombre" : "Primera jornada R3",
             "inicio": "2019/06/23 22:00",
-            "comentarios": "Comentarios de la primera jornada de la primera ruta",
+            "comentarios": "Comentarios de la primera jornada de la tercera ruta",
             "distancia": "450,7",
             "duracion": "1d 14h 30'",
             "tramos": []
         },
         {
-            "ruta": "ruta2",
             "ordinal" : "2",
-            "nombre" : "Segunda jornada",
+            "nombre" : "Segunda jornada R3",
             "inicio": "2019/06/25 07:00",
-            "comentarios": "Comentarios de la segunda jornada de la primera ruta",
+            "comentarios": "Comentarios de la segunda jornada de la tercera ruta",
             "distancia": "310,2",
             "duracion": "15h 45'",
             "tramos": []
         },
         {
-            "ruta": "ruta3",
             "ordinal" : "3",
-            "nombre" : "Tercera jornada",
+            "nombre" : "Tercera jornada R3",
             "inicio": "2019/06/26 07:00",
-            "comentarios": "Comentarios de la tercera jornada de la primera ruta",
+            "comentarios": "Comentarios de la tercera jornada de la tercera ruta",
             "distancia": "400,7",
             "duracion": "1d 6h 00'",
             "tramos": []
         },
         {
-            "ruta": "ruta1",
             "ordinal" : "4",
-            "nombre" : "Cuarta jornada",
+            "nombre" : "Cuarta jornada R3",
             "inicio": "2019/06/28 07:00",
-            "comentarios": "Comentarios de la cuarta jornada de la primera ruta",
+            "comentarios": "Comentarios de la cuarta jornada de la tercera ruta",
             "distancia": "150,7",
             "duracion": "07h 30'",
             "tramos": []

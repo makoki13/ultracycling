@@ -96,4 +96,19 @@ class Jornada {
     return opciones;
   }
 
+   static Future<List<dynamic>> listaTramos(String idRuta, String idJornada) async {
+    List<dynamic> opciones = [];  
+    List<dynamic> tramos = [];  
+
+    final resp = await rootBundle.loadString('data/jornadas_lista.json');    
+    Map dataMap = json.decode( resp );
+    opciones = dataMap[idRuta];
+    opciones.forEach((e) {       
+      if (e['ordinal']=="1") {
+        tramos = e['tramos'];
+      }
+    });
+    return tramos;
+  }
+
 }

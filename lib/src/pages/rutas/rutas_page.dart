@@ -56,7 +56,7 @@ class RutasPage extends StatelessWidget {
         leading:  getIcon( opt['estado'] ) ,
         subtitle: Text( opt['inicio'] ),
         trailing: Icon ( Icons.keyboard_arrow_right, color: Colors.blue ),
-        onTap: () {},
+        onTap: () { Navigator.pushNamed(context, 'favorita'  ); },
       );
 
       opciones..add( widgetTemp )
