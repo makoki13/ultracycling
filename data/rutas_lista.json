@@ -4,7 +4,7 @@
             "id" : "ruta1",
             "nombre" : "Sin comenzar",
             "clave" : "PRIMER",
-            "inicio": "2019/06/22",
+            "inicio": "2019-05-01",
             "comentarios": "Comentarios de a primera ruta",
             "estado": "0",
             "favorita": "1"
@@ -13,7 +13,7 @@
             "id" : "ruta2",
             "nombre" : "En curso",
             "clave" : "SEGUND",
-            "inicio": "2019/07/22",
+            "inicio": "2019-07-22",
             "comentarios": "Comentarios de la segunda ruta",
             "estado": "1",
             "favorita": "0"
@@ -22,7 +22,7 @@
             "id" : "ruta3",
             "nombre" : "Terminado",
             "clave" : "TER",
-            "inicio": "2018/08/22",
+            "inicio": "2018-08-22",
             "comentarios": "Comentarios de la cuarta ruta",
             "estado": "2",
             "favorita": "0"
@@ -31,7 +31,7 @@
             "id" : "ruta4",
             "nombre" : "Anulado",
             "clave" : "CUARTA",
-            "inicio": "2019/09/22",
+            "inicio": "2019-09-22",
             "comentarios": "Comentarios de a primera ruta",
             "estado": "3",
             "favorita": "0"

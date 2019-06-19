@@ -33,7 +33,7 @@ class RutasPage extends StatelessWidget {
 
   Widget _lista() {
     return FutureBuilder(
-      future: Ruta.lista(),
+      future: Rutas.getRutas(),
       initialData: [],
       builder: ( context, AsyncSnapshot<List<dynamic>> snapshot ){
 

@@ -4,7 +4,7 @@ class Aplicacion {
   Ruta _rutaFavorita;
 
   Aplicacion() {
-    this._rutaFavorita = Ruta.getFavorita();
+    this._rutaFavorita = Rutas.getFavorita();
   }
 
   Ruta get rutaFavorita {
