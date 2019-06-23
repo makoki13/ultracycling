@@ -112,10 +112,14 @@ class JornadaPage extends StatelessWidget {
     data.forEach( (opt) {
       String nombre = opt['nombre'];       
       if (nombre.trim() == '') nombre = '(sin nombre)';
+      String inicio = opt['inicio'];
+      if (opt['esFinal']=='S') inicio += '\n${opt['fin']}'  ;
+      inicio += "\n"+opt['distancia'].toString() + ' Kms.';
+      inicio += "\n"+opt['tiempo'].toString() + '';
       final widgetTemp = ListTile(
         title: Text( nombre ),        
         leading:  Text(opt['ordinal'] ) ,
-        subtitle: Text( opt['inicio'] ),
+        subtitle: Text( inicio ),
         trailing: Icon ( Icons.keyboard_arrow_right, color: Colors.blue ),
         onTap: () { Navigator.pushNamed(context, 'favorita'  ); },
       );

@@ -106,6 +106,9 @@ class Jornada {
     opciones.forEach((e) {       
       if (e['ordinal']=="1") {
         tramos = e['tramos'];
+        tramos.forEach( (f) {
+          f['nombre'] = 'Pepito';
+        });
       }
     });
     return tramos;

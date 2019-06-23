@@ -13,10 +13,60 @@
                     "nombre": "Tramo 1 ruta 1",
                     "comentarios": "Comentarios del tramo 1 de la primera jornada de la primera ruta",
                     "inicio": "Punto de inicio",
+                    "esFinal": "N",
+                    "fin": "",
+                    "segmentos": [],
+                    "marcas": [],
+                    "distancia": 120.6,
+                    "tiempo": 600
+                },
+                {
+                    "ordinal": "2",
+                    "nombre": "Tramo 2 ruta 1",
+                    "comentarios": "Comentarios del tramo 2 de la primera jornada de la primera ruta",
+                    "inicio": "Punto de inicio",
+                    "esFinal": "N",
+                    "fin": "",
+                    "segmentos": [],
+                    "marcas": [],
+                    "distancia": 115.2,
+                    "tiempo": 550
+                },
+                {
+                    "ordinal": "3",
+                    "nombre": "Tramo 3 ruta 1",
+                    "comentarios": "Comentarios del tramo 3 de la primera jornada de la primera ruta",
+                    "inicio": "Punto de inicio",
+                    "esFinal": "N",
+                    "fin": "",
+                    "segmentos": [],
+                    "marcas": [],
+                    "distancia": 98.7,
+                    "tiempo": 500
+                },
+                {
+                    "ordinal": "4",
+                    "nombre": "Tramo 4 ruta 1",
+                    "comentarios": "Comentarios del tramo 4 de la primera jornada de la primera ruta",
+                    "inicio": "Punto de inicio",
+                    "esFinal": "N",
+                    "fin": "Punto de fin",
+                    "segmentos": [],
+                    "marcas": [],
+                    "distancia": 134.1,
+                    "tiempo": 400
+                },
+                {
+                    "ordinal": "5",
+                    "nombre": "Tramo 5 ruta 1",
+                    "comentarios": "Comentarios del tramo 5 de la primera jornada de la primera ruta",
+                    "inicio": "Punto de inicio",
                     "esFinal": "S",
                     "fin": "Punto de fin",
                     "segmentos": [],
-                    "marcas": []
+                    "marcas": [],
+                    "distancia": 110.0,
+                    "tiempo": 300
                 }
             ]
         },
