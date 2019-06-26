@@ -12,66 +12,8 @@ class JornadaPage extends StatelessWidget {
         backgroundColor: Colors.deepOrange,
       ),
       body: 
-        _lista()         
-      /*
-      Column (
-        children: <Widget>[
-          _cabecera(),
-          SizedBox(height: 30.0),
-          Column(
-            children: <Widget>[
-              _lista(),
-            ] 
-          )
-          //_lista(),          
-        ]
-      ) 
-      */     
+        _lista()      
     );
-  }
-
-  Widget _cabecera() {
-
-    return Card(
-      elevation: 10.0,
-      shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0) ),
-      child: Column(
-        children: <Widget>[
-          ListTile(
-            leading: Text( 
-              "J1",          
-              style: TextStyle(   
-              fontSize: 24.0 ,         
-              shadows: <Shadow>[
-                Shadow(
-                  offset: Offset(2.0, 2.0),
-                  blurRadius: 3.0,
-                  color: Color.fromARGB(125, 0, 0, 0),
-                ),
-                Shadow(
-                  offset: Offset(2.0, 2.0),
-                  blurRadius: 8.0,
-                  color: Color.fromARGB(125, 0, 0, 255),
-                ),
-              ],
-              ),
-            ) ,
-            title: Text('Texto de la jornada'),
-            subtitle: Text('Aquí estamos con la descripción de la tajera que quiero que ustedes vean para tener una idea de lo que quiero mostrarles'),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              FlatButton(
-                child: Text('Eliminar jornada'),
-                onPressed: () {},
-              )              
-            ],
-          )
-        ],
-      ),
-    );
-
   }
 
   Widget _lista() {
